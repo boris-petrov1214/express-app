@@ -11,9 +11,6 @@ var path = require('path');
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 3000);
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.json());
@@ -29,29 +26,6 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/users', user.list);
-
-
-app.get('/hey',function(req,res){
-    //do some aactions
-    //and send result
-});
-app.get('/test-route',function(req,res){
-  res.send("test");
-});
-
-app.get('middleware',function(req,res){
-    res.send("git merge test");
-})
-
-
-app.get('bbb',function(req,res){
-    res.send("new branch changed");
-});
-
-
-app.get('ma',function(req,res){
-    res.send("master branch cahgned already");
-});
 
 
 http.createServer(app).listen(app.get('port'), function(){
