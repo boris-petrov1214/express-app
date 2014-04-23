@@ -53,6 +53,14 @@ app.get('ma',function(req,res){
     res.send("master branch cahgned already");
 });
 
+app.get('branch-a',function(req,res){
+    //some update here;
+    //some update here;
+    //some update here;
+    //some update here;//some update here;
+
+})
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
