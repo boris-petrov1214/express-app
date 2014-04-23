@@ -43,6 +43,10 @@ app.get('middleware',function(req,res){
     res.send("git merge test");
 })
 
+app.get('ma,function(req,res){
+    res.send("master branch cahgned already");
+})
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
