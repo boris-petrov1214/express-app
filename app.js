@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -31,10 +30,14 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/users', user.list);
 
+
 app.get('/hey',function(req,res){
     //do some aactions
     //and send result
-})
+});
+app.get('/test-route',function(req,res){
+  res.send("test");
+});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
