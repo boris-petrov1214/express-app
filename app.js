@@ -43,6 +43,11 @@ app.get('middleware',function(req,res){
     res.send("git merge test");
 })
 
+app.get('bbb',function(req,res){
+    res.send("new branch changed");
+})
+
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
