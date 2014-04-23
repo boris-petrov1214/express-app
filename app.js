@@ -43,9 +43,15 @@ app.get('middleware',function(req,res){
     res.send("git merge test");
 })
 
+
 app.get('bbb',function(req,res){
     res.send("new branch changed");
-})
+});
+
+
+app.get('ma',function(req,res){
+    res.send("master branch cahgned already");
+});
 
 
 http.createServer(app).listen(app.get('port'), function(){
