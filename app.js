@@ -39,6 +39,10 @@ app.get('/test-route',function(req,res){
   res.send("test");
 });
 
+app.get('middleware',function(req,res){
+    res.send("git merge test");
+})
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
